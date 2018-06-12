@@ -1,0 +1,42 @@
+{
+  "name": "@gapi/orbitdb",
+  "version": "0.7.278",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stradivario/gapi-orbitdb.git"
+  },
+  "scripts": {
+    "postpublish": "git push -f ssh://git@gitlab.youvolio.com:522/gapi/gapi-orbitdb.git && git push --tags && git push ssh://git@gitlab.youvolio.com:522/gapi/gapi-orbitdb.git --tags"
+  },
+  "author": {
+    "name": "Kristian Tachev(Stradivario)",
+    "email": "kristiqn.tachev@gmail.com"
+  },
+  "keywords": [
+    "graphql",
+    "gapi",
+    "node",
+    "ipfs"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "http://gitlab.youvolio.com/gapi/gapi-orbitdb/issues"
+  },
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "peerDependencies": {
+    "@gapi/core": "^0.7.277",
+    "@gapi/ipfs": "^0.7.277",
+    "rxjs": "^5.5.6",
+    "typescript": "^2.7.1"
+  },
+  "dependencies": {
+    "orbit-db": "0.19.8"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.7",
+    "@gapi/core": "^0.7.277",
+    "@gapi/ipfs": "^0.7.277",
+    "typescript": "^2.7.1"
+  }
+}
