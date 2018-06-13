@@ -1,4 +1,4 @@
-import { InjectionToken } from '@gapi/core/utils/container/Token';
+import { InjectionToken } from '@gapi/core';
 
 export interface IpfsHashString extends String {}
 export interface LamportClock {
