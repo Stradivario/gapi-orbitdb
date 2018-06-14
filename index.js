@@ -29,9 +29,9 @@ GapiOribtDbModule = __decorate([
             {
                 provide: gapi_orbitdb_injection_1.OrbitDb,
                 deps: [ipfs_1.IPFS],
-                useFactory: (ipfs, IPFS) => {
-                    return new Promise((r) => ipfs.on('ready', () => __awaiter(this, void 0, void 0, function* () { return r(new orbitDb(ipfs)); })));
-                }
+                useFactory: (ipfs) => __awaiter(this, void 0, void 0, function* () {
+                    return yield new Promise(resolve => ipfs.on('ready', () => resolve(new orbitDb(ipfs))));
+                })
             }
         ]
     })

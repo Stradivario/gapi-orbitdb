@@ -8,8 +8,8 @@ import { OrbitDb } from './gapi-orbitdb-injection';
         {
             provide: OrbitDb,
             deps: [IPFS],
-            useFactory: (ipfs: IPFS, IPFS) => {
-                return new Promise((r) => ipfs.on('ready', async () => r(new orbitDb(ipfs))));
+            useFactory: async (ipfs: IPFS) => {
+                return await new Promise(resolve => ipfs.on('ready', () => resolve(new orbitDb(ipfs))));
             }
         }
     ]
