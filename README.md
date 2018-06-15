@@ -77,7 +77,7 @@ export class User {
 export class OrbitService {
     constructor(
         @Inject(IPFS_NODE_READY) private ipfsNodeReady: Subject<boolean>,
-        @Inject(OrbitDb) private orbitdb: OrbitDb
+        @Inject(OrbitDb) private orbitdb: Promise<OrbitDb>
     ) {
         this.ipfsNodeReady
             .switchMap(
