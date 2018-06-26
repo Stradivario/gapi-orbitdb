@@ -25,8 +25,8 @@
   "module": "index.js",
   "typings": "index.d.ts",
   "peerDependencies": {
-    "@gapi/core": "^0.7.294",
-    "@gapi/ipfs": "^0.7.294",
+    "@gapi/core": "^0.7.297",
+    "@gapi/ipfs": "^0.7.297",
     "rxjs": "^5.5.6",
     "typescript": "^2.7.1"
   },
@@ -35,8 +35,8 @@
   },
   "devDependencies": {
     "@types/node": "^9.4.7",
-    "@gapi/core": "^0.7.294",
-    "@gapi/ipfs": "^0.7.294",
+    "@gapi/core": "^0.7.297",
+    "@gapi/ipfs": "^0.7.297",
     "typescript": "^2.7.1"
   }
 }
