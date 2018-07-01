@@ -1,19 +1,10 @@
-import { GapiModuleWithServices, GapiModule } from '@gapi/core';
-import { IPFS } from '@gapi/ipfs';
-import * as orbitDb from 'orbit-db';
-import { OrbitDb } from './gapi-orbitdb-injection';
+import { Module } from '@rxdi/core';
+import { OrbitDbPlugin } from './orbitdb.plugin';
 
-@GapiModule({
-    services: [
-        {
-            provide: OrbitDb,
-            deps: [IPFS],
-            useFactory: async (ipfs: IPFS) => {
-                return await new Promise(resolve => ipfs.on('ready', () => resolve(new orbitDb(ipfs))));
-            }
-        }
-    ]
+@Module({
+    plugins: [OrbitDbPlugin]
 })
-export class GapiOribtDbModule {}
+export class OribtDbModule {}
 
-export * from './gapi-orbitdb-injection';
+export * from './orbitdb-injection';
+export * from './orbitdb.plugin';

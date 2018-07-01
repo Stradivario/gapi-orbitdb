@@ -1,3 +1,4 @@
-export declare class GapiOribtDbModule {
+export declare class OribtDbModule {
 }
-export * from './gapi-orbitdb-injection';
+export * from './orbitdb-injection';
+export * from './orbitdb.plugin';

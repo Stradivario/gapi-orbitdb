@@ -20,19 +20,19 @@ npm i @gapi/ipfs
 ```
 ##### Important part is that Ipfs module should be resolved before OrbitDb module to work properly
 
-##### Then import your module above GapiOrbitDbModule the following way:
+##### Then import your module above OrbitDbModule the following way:
 
 ##### Import inside AppModule or CoreModule
 
 ```typescript
 
-import { GapiModule } from '@gapi/core';
-import { GapiIpfsModule } from '@gapi/ipfs';
-import { GapiOribtDbModule } from '@gapi/orbitdb';
+import { Module } from '@rxdi/core';
+import { IpfsModule } from '@gapi/ipfs';
+import { OribtDbModule } from '@gapi/orbitdb';
 
-@GapiModule({
+@Module({
     imports: [
-        GapiIpfsModule.forRoot({
+        IpfsModule.forRoot({
             start: true,
             config: {
                 Addresses: {
@@ -48,7 +48,7 @@ import { GapiOribtDbModule } from '@gapi/orbitdb';
             },
             logging: true,
         }),
-        GapiOribtDbModule
+        OribtDbModule
     ]
 })
 export class CoreModule { }
@@ -61,7 +61,7 @@ note: keep in mind that this is beta testing and contribution is appreciated ! :
 
 ```typescript
 
-import { Inject, Service } from '@gapi/core';
+import { Inject, Service } from '@rxdi/core';
 import { IPFS_NODE_READY } from '@gapi/ipfs';
 import { OrbitDb } from '@gapi/orbitdb';
 import { Subject } from 'rxjs/Subject';
@@ -76,8 +76,7 @@ export class User {
 @Service()
 export class OrbitService {
     constructor(
-        @Inject(IPFS_NODE_READY) private ipfsNodeReady: Subject<boolean>,
-        @Inject(OrbitDb) private orbitdb: Promise<OrbitDb>
+        @Inject(OrbitDb) private orbitdb: OrbitDb,
     ) {
         this.ipfsNodeReady
             .switchMap(
@@ -88,8 +87,7 @@ export class OrbitService {
 
     async orbitTest() {
         // In later version gapi will resolve Async Factories and will not be needed
-        const orbitdb = await this.orbitdb;
-        const db = await orbitdb.log<User>('hello');
+        const db = await this.orbitdb.log<User>('hello');
         await db.load();
 
         // Listen for updates from peers
