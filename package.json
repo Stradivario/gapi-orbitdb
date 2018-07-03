@@ -26,7 +26,7 @@
   "typings": "index.d.ts",
   "peerDependencies": {
     "@rxdi/core": "^0.0.106",
-    "@gapi/ipfs": "^1.0.7"
+    "@gapi/ipfs": "^1.0.10"
   },
   "dependencies": {
     "orbit-db": "0.19.8"
@@ -34,7 +34,7 @@
   "devDependencies": {
     "@types/node": "^10.3.4",
     "@rxdi/core": "^0.0.106",
-    "@gapi/ipfs": "^1.0.7",
+    "@gapi/ipfs": "^1.0.10",
     "typescript": "^2.7.1"
   }
 }
