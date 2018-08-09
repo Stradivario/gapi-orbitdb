@@ -25,7 +25,7 @@
   "module": "index.js",
   "typings": "index.d.ts",
   "peerDependencies": {
-    "@rxdi/core": "^0.0.215",
+    "@rxdi/core": "^0.0.217",
     "@gapi/ipfs": "^1.2.21"
   },
   "dependencies": {
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "^10.3.4",
-    "@rxdi/core": "^0.0.215",
+    "@rxdi/core": "^0.0.217",
     "@gapi/ipfs": "^1.2.21",
     "typescript": "3.0.1"
   }
