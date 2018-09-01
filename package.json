@@ -30,7 +30,7 @@
   "devDependencies": {
     "@types/node": "^10.3.4",
     "@rxdi/core": "^0.0.229",
-    "@gapi/ipfs": "^1.2.39",
+    "@gapi/ipfs": "^1.2.40",
     "typescript": "3.0.1"
   }
 }
