@@ -28,7 +28,7 @@ npm i @gapi/ipfs
 
 import { Module } from '@rxdi/core';
 import { IpfsModule } from '@gapi/ipfs';
-import { OribtDbModule } from '@gapi/orbitdb';
+import { OrbitDbModule } from '@gapi/orbitdb';
 
 @Module({
     imports: [
@@ -48,7 +48,7 @@ import { OribtDbModule } from '@gapi/orbitdb';
             },
             logging: true,
         }),
-        OribtDbModule
+        OrbitDbModule
     ]
 })
 export class CoreModule { }

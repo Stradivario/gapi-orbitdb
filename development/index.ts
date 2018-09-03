@@ -4,7 +4,7 @@ import { OrbitDbPlugin } from './orbitdb.plugin';
 @Module({
     plugins: [OrbitDbPlugin]
 })
-export class OribtDbModule {}
+export class OrbitDbModule {}
 
 export * from './orbitdb-injection';
 export * from './orbitdb.plugin';

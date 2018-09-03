@@ -11,13 +11,13 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@rxdi/core");
 const orbitdb_plugin_1 = require("./orbitdb.plugin");
-let OribtDbModule = class OribtDbModule {
+let OrbitDbModule = class OrbitDbModule {
 };
-OribtDbModule = __decorate([
+OrbitDbModule = __decorate([
     core_1.Module({
         plugins: [orbitdb_plugin_1.OrbitDbPlugin]
     })
-], OribtDbModule);
-exports.OribtDbModule = OribtDbModule;
+], OrbitDbModule);
+exports.OrbitDbModule = OrbitDbModule;
 __export(require("./orbitdb-injection"));
 __export(require("./orbitdb.plugin"));
