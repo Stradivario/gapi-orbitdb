@@ -10,6 +10,10 @@
         {
             "name": "@gapi/ipfs",
             "version": "1.2.55"
+        },
+        {
+            "name": "@rxdi/core",
+            "version": "0.0.246"
         }
     ]
 }
