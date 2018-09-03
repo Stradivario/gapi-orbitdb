@@ -1,7 +1,7 @@
 import { Plugin, Inject, Container, ExitHandlerService } from '@rxdi/core';
 import { IPFS } from '@gapi/ipfs';
 import { OrbitDb } from './orbitdb-injection';
-import * as orbitDb from 'orbit-db';
+import orbitDb from 'orbit-db';
 
 @Plugin()
 export class OrbitDbPlugin {

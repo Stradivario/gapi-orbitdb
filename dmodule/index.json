@@ -1,11 +1,15 @@
 {
     "name": "@orbitdb",
     "typings": "QmcPwkW8sU77yc78rvbmRyKikMm4gieseqRLN71dwdExFu",
-    "module": "QmQBb7st6ri4MnUSbnLXi3ytJNwDpcjpwqJgBkU2WraM1n",
+    "module": "QmUEqSRJvn44ThooeizVT8Tp7moW188hX4sBDgV3hN2khc",
     "packages": [
         {
             "name": "orbit-db",
             "version": "0.19.8"
+        },
+        {
+            "name": "@gapi/ipfs",
+            "version": "1.2.55"
         }
     ]
 }

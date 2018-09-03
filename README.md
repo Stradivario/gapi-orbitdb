@@ -14,28 +14,39 @@ $ npm install @gapi/orbitdb --save
 ## Beta Decentralized module using @rxdi infrastructure
 
 ##### To install @orbitdb from ipfs network install globally @rxdi/core `npm i @rxdi/core`
-Check it inside ipfs network: [QmXTyBFnKCF8Rq1oTCzfnAMKG5Fsr72nDWvot74i6CaqEK](http://ipfs.io/ipfs/QmXTyBFnKCF8Rq1oTCzfnAMKG5Fsr72nDWvot74i6CaqEK)
+Check it inside ipfs network: [QmZ12fBVuHtvESk5VvT1mLLwuomfWL6PdB2rreBszRk4vp](http://ipfs.io/ipfs/QmZ12fBVuHtvESk5VvT1mLLwuomfWL6PdB2rreBszRk4vp)
 
 ```bash
-$ rxdi i QmXTyBFnKCF8Rq1oTCzfnAMKG5Fsr72nDWvot74i6CaqEK
+$ rxdi i QmZ12fBVuHtvESk5VvT1mLLwuomfWL6PdB2rreBszRk4vp
 ```
 
 Important: 
 - You can use this module without @gapi just @orbitdb when importing
 - Decentralized module includes property packages: [] if it depends on some "centralized" source
 - rxdi install will trigger npm install after finish if there are any packages: [] inside array so you don't have to install
-- In this case we will install 
+- In this case we will install @gapi/ipfs@1.2.55 and orbit-db@0.19.8 since it is the working version nothing less nothing more! ;)
 
 ```json
-"packages": [
-    {
-        "name": "orbit-db",
-        "version": "0.19.8"
-    }
-]
+{
+    "name": "@orbitdb",
+    "typings": "QmcPwkW8sU77yc78rvbmRyKikMm4gieseqRLN71dwdExFu",
+    "module": "QmUEqSRJvn44ThooeizVT8Tp7moW188hX4sBDgV3hN2khc",
+    "packages": [
+        {
+            "name": "orbit-db",
+            "version": "0.19.8"
+        },
+        {
+            "name": "@gapi/ipfs",
+            "version": "1.2.55"
+        }
+    ]
+}
 ```
 
 ## Consuming @gapi/orbitdb
+
+Important: if you install from decentralized source via `rxdi i` command you don't need to install @gapi/ipfs module!
 
 ##### To work everything as expected we need to install [@gapi/ipfs](https://github.com/Stradivario/gapi-ipfs) module because OrbitDB is working with ipfs protocol to install it type:
 
