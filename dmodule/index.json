@@ -1,0 +1,11 @@
+{
+    "name": "@orbitdb",
+    "typings": "QmcPwkW8sU77yc78rvbmRyKikMm4gieseqRLN71dwdExFu",
+    "module": "QmQBb7st6ri4MnUSbnLXi3ytJNwDpcjpwqJgBkU2WraM1n",
+    "packages": [
+        {
+            "name": "orbit-db",
+            "version": "0.19.8"
+        }
+    ]
+}

@@ -29,8 +29,12 @@
   },
   "devDependencies": {
     "@types/node": "^10.3.4",
-    "@rxdi/core": "^0.0.240",
+    "@rxdi/core": "^0.0.242",
     "@gapi/ipfs": "^1.2.55",
-    "typescript": "3.0.1"
+    "@gapi/cli": "^1.2.10",
+    "@rxdi/dts-merge": "^0.0.239",
+    "archiver": "^2.1.1",
+    "parcel-bundler": "^1.9.7",
+    "typescript": "^3.0.1"
   }
 }
