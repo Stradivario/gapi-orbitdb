@@ -20,7 +20,20 @@ Check it inside ipfs network: [QmXTyBFnKCF8Rq1oTCzfnAMKG5Fsr72nDWvot74i6CaqEK](h
 $ rxdi i QmXTyBFnKCF8Rq1oTCzfnAMKG5Fsr72nDWvot74i6CaqEK
 ```
 
-Then you can use it without @gapi/orbitdb just @orbitdb when importing
+Important: 
+- You can use this module without @gapi just @orbitdb when importing
+- Decentralized module includes property packages: [] if it depends on some "centralized" source
+- rxdi install will trigger npm install after finish if there are any packages: [] inside array so you don't have to install
+- In this case we will install 
+
+```json
+"packages": [
+    {
+        "name": "orbit-db",
+        "version": "0.19.8"
+    }
+]
+```
 
 ## Consuming @gapi/orbitdb
 
