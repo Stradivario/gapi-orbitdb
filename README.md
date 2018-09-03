@@ -14,10 +14,10 @@ $ npm install @gapi/orbitdb --save
 ## Beta Decentralized module using @rxdi infrastructure
 
 ##### To install @orbitdb from ipfs network install globally @rxdi/core `npm i @rxdi/core`
-Check it inside ipfs network: [QmdjvDUmJaXB5FqD2P2zhJ1AavCRbTPYTFEaai1MQRivi9](http://ipfs.io/ipfs/QmdjvDUmJaXB5FqD2P2zhJ1AavCRbTPYTFEaai1MQRivi9)
+Check it inside ipfs network: [Qmc8ZASLLTyy1K8XfzndBqcuDzdrE9gg9GUFtD2CtY8mdx](http://ipfs.io/ipfs/Qmc8ZASLLTyy1K8XfzndBqcuDzdrE9gg9GUFtD2CtY8mdx)
 
 ```bash
-$ rxdi i QmdjvDUmJaXB5FqD2P2zhJ1AavCRbTPYTFEaai1MQRivi9
+$ rxdi i Qmc8ZASLLTyy1K8XfzndBqcuDzdrE9gg9GUFtD2CtY8mdx
 ```
 
 Important: 
@@ -42,7 +42,7 @@ Important:
         },
         {
             "name": "@rxdi/core",
-            "version": "0.0.246"
+            "version": "0.0.254"
         }
     ]
 }
