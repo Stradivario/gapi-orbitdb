@@ -2,6 +2,9 @@
     "name": "@orbitdb",
     "typings": "QmW1tA7xXv9HNDywkC3p8ruvx1LqRYX4i4hDh8TNRJuPUg",
     "module": "QmUEqSRJvn44ThooeizVT8Tp7moW188hX4sBDgV3hN2khc",
+    "dependencies": [
+        "QmQR7ymCVYPPSp9wkMb9niM8Zv36EzXim7rqZZBhFQXnGe"
+    ],
     "packages": [
         {
             "name": "orbit-db",
@@ -10,10 +13,6 @@
         {
             "name": "@gapi/ipfs",
             "version": "1.2.55"
-        },
-        {
-            "name": "@rxdi/core",
-            "version": "0.0.254"
         }
     ]
 }
