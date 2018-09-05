@@ -1,4 +1,4 @@
-declare module '@orbitdb/orbitdb-injection' {
+declare module '@gapi/orbitdb/orbitdb-injection' {
 	import { InjectionToken } from '@rxdi/core';
 	export interface IpfsHashString extends String {
 	}
@@ -55,7 +55,7 @@ declare module '@orbitdb/orbitdb-injection' {
 	export const OrbitDb: InjectionToken<OrbitDb>;
 
 }
-declare module '@orbitdb/orbitdb.plugin' {
+declare module '@gapi/orbitdb/orbitdb.plugin' {
 	import { ExitHandlerService } from '@rxdi/core';
 	import { IPFS } from '@gapi/ipfs';
 	export class OrbitDbPlugin {
@@ -66,18 +66,10 @@ declare module '@orbitdb/orbitdb.plugin' {
 	}
 
 }
-declare module '@orbitdb' {
-	export class OrbitDbModule {
-	}
-	export * from '@orbitdb/orbitdb-injection';
-	export * from '@orbitdb/orbitdb.plugin';
-
-}
-
 declare module '@gapi/orbitdb' {
 	export class OrbitDbModule {
 	}
-	export * from '@orbitdb/orbitdb-injection';
-	export * from '@orbitdb/orbitdb.plugin';
+	export * from '@gapi/orbitdb/orbitdb-injection';
+	export * from '@gapi/orbitdb/orbitdb.plugin';
 
 }

@@ -1,9 +1,10 @@
 {
-    "name": "@orbitdb",
-    "typings": "QmW1tA7xXv9HNDywkC3p8ruvx1LqRYX4i4hDh8TNRJuPUg",
+    "name": "@gapi/orbitdb",
+    "version":"1.4.8",
+    "typings": "QmVXzhhjQCoNZJLwYWwtxLYtAC1x1No8yrZcE9d3unaXnQ",
     "module": "QmUEqSRJvn44ThooeizVT8Tp7moW188hX4sBDgV3hN2khc",
     "dependencies": [
-        "QmQR7ymCVYPPSp9wkMb9niM8Zv36EzXim7rqZZBhFQXnGe"
+        "QmP9n7m1UWkFn2hqt7mnfQYnBtxmFyyvKZHN7hgngQb1gM"
     ],
     "packages": [
         {
@@ -12,7 +13,7 @@
         },
         {
             "name": "@gapi/ipfs",
-            "version": "1.2.55"
+            "version": "1.4.7"
         }
     ]
 }
