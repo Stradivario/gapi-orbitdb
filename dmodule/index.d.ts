@@ -73,3 +73,11 @@ declare module '@orbitdb' {
 	export * from '@orbitdb/orbitdb.plugin';
 
 }
+
+declare module '@gapi/orbitdb' {
+	export class OrbitDbModule {
+	}
+	export * from '@orbitdb/orbitdb-injection';
+	export * from '@orbitdb/orbitdb.plugin';
+
+}
