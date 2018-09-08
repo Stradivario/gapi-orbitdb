@@ -116,16 +116,10 @@ export class User {
 export class OrbitService {
     constructor(
         @Inject(OrbitDb) private orbitdb: OrbitDb,
-    ) {
-        this.ipfsNodeReady
-            .switchMap(
-                () => Observable.fromPromise(this.orbitTest())
-            )
-            .subscribe();
-    }
+    ) {}
 
     async orbitTest() {
-        // In later version gapi will resolve Async Factories and will not be needed
+        
         const db = await this.orbitdb.log<User>('hello');
         await db.load();
 
@@ -155,6 +149,72 @@ export class OrbitService {
 
 }
 
+```
+
+
+Or you can do more if you inject database as a Service
+
+
+```typescript
+
+import { Module } from '@rxdi/core';
+import { IpfsModule } from '@gapi/ipfs';
+import { OrbitDbModule } from '@gapi/orbitdb';
+import { OrbitDb } from '@gapi/orbitdb';
+
+interface User {
+    id: string;
+}
+
+@Module({
+    imports: [
+        IpfsModule.forRoot({
+            start: true,
+            config: {
+                Addresses: {
+                    API: '/ip4/127.0.0.1/tcp/5002',
+                    Announce: [],
+                    Gateway: '/ip4/127.0.0.1/tcp/8081',
+                    NoAnnounce: [],
+                    Swarm: [
+                        '/ip4/0.0.0.0/tcp/4002',
+                        '/ip6/::/tcp/4002'
+                    ]
+                },
+            },
+            logging: true,
+        }),
+        OrbitDbModule
+    ],
+    services: [
+        {
+            provide: 'hello',
+            deps: [OrbitDb],
+            useFactory: async (orbitdb: OrbitDb) => await (await orbitdb.log<User>('hello')).load()
+        }
+    ]
+})
+export class CoreModule { }
+
+```
+
+Then inject database inside whole application the following way:
+
+```typescript
+import { Service, Inject } from '@rxdi/core';
+import { OrbitDb } from '@gapi/orbitdb';
+
+interface User {
+    id: string;
+}
+
+@Service()
+export class OrbitService {
+    constructor(
+        @Inject('hello') private helloDB: OrbitLogDatabaseInstance<User>,
+    ) {}
+
+}
 ```
 
 TODO: Better documentation...
