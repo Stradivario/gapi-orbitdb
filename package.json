@@ -30,8 +30,8 @@
   "devDependencies": {
     "@types/node": "^10.3.4",
     "@rxdi/core": "^0.0.420",
-    "@gapi/ipfs": "^1.5.2",
-    "@gapi/cli": "^1.5.2",
+    "@gapi/ipfs": "^1.5.4",
+    "@gapi/cli": "^1.5.4",
     "@rxdi/dts-merge": "^0.0.239",
     "archiver": "^2.1.1",
     "parcel-bundler": "^1.9.7",
