@@ -34,7 +34,7 @@
     "@gapi/cli": "^1.8.22",
     "@rxdi/dts-merge": "^0.0.239",
     "archiver": "^2.1.1",
-    "parcel-bundler": "^1.9.7",
+    "parcel-bundler": "^1.12.3",
     "typescript": "^3.0.1"
   }
 }
